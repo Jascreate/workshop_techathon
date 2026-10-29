@@ -1,4 +1,3 @@
-
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -21,7 +20,7 @@ navLinks.querySelectorAll("a").forEach((link) => {
 
 // Add a subtle reveal animation to sections as they enter view
 const sections = document.querySelectorAll(
-  ".about-grid, .learn-card, .audience-panel, .speaker-card, .faq-item"
+  ".flow-step, .learn-card, .audience-panel, .speaker-card, .faq-item"
 );
 
 if ("IntersectionObserver" in window) {
