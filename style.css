@@ -2256,3 +2256,48 @@ section {
     gap: 10px;
   }
 }
+
+
+/* Audience Grid & Cards */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.audience-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 14px;
+  background: rgba(5, 11, 26, 0.75);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 4px;
+}
+
+.aud-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.audience-card strong {
+  display: block;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.audience-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 600px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
