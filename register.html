@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#050B1A">
-  <meta name="description" content="Register for the Agentic AI Workshop. Choose your registration path.">
+  <meta name="description" content="Register for the Agentic AI Workshop at ARSD College. Choose your registration path.">
 
   <title>Register | Agentic AI Workshop</title>
 
@@ -15,16 +15,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Custom layout additions for the registration page */
     .blocks-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 35px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
       max-width: 1050px;
       margin: 0 auto;
     }
 
-    /* Modifying the mission-card to act as a clickable button */
     .interactive-card {
       display: flex;
       flex-direction: column;
@@ -32,26 +30,53 @@
       text-align: center;
       text-decoration: none;
       cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      padding: 36px 28px;
+      background: #0D1B36;
+      border: 1px solid #294A78;
+      box-shadow: 8px 8px 0 #050B1A;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s, background 0.25s;
     }
 
     .interactive-card:hover {
       transform: translateY(-8px);
       border-color: var(--blue);
+      background: #10264A;
       box-shadow: 12px 12px 0 #050B1A;
     }
 
     .interactive-card .pixel-orb {
-      margin: 0 auto 25px;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+      display: grid;
+      place-items: center;
     }
 
     .interactive-card h3 {
       color: var(--text);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .interactive-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
     }
 
     .interactive-card .btn {
-      margin-top: 25px;
+      margin-top: auto;
       width: 100%;
+    }
+
+    @media (max-width: 700px) {
+      .blocks-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .interactive-card {
+        padding: 26px 20px;
+      }
     }
   </style>
 </head>
@@ -64,12 +89,21 @@
       <span>AGENTIC AI<small>WORKSHOP</small></span>
     </a>
 
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
     <nav class="nav-links" id="navLinks">
       <a href="index.html#home">Home</a>
       <a href="index.html#flow">Workshop Flow</a>
       <a href="index.html#learn">Curriculum</a>
+      <a href="index.html#prizes">Prizes</a>
+      <a href="index.html#speaker">Speaker</a>
       <a href="index.html#faq">FAQs</a>
     </nav>
+
+    <a href="index.html#flow" class="nav-quest">◆ VIEW TIMELINE</a>
   </header>
 
   <main>
@@ -77,6 +111,9 @@
     <section class="page-header">
       <p class="eyebrow">SECURE YOUR SPOT</p>
       <h1>WORKSHOP<br>REGISTRATION</h1>
+      <p class="section-subtitle" style="max-width: 600px; margin: 15px auto 0;">
+        Join us on 5th Nov, 2026 at Computer Lab 4, ARSD College. Free refreshments &amp; ₹4,500+ in prizes.
+      </p>
     </section>
 
     <!-- TECH DIVIDER -->
@@ -84,7 +121,57 @@
       <span class="td-line td-line-left"></span>
       <span class="td-chip">
         <span class="td-bits"><i></i><i></i><i></i></span>
-        <span class="td-label">SYS.01 :: WORKSHOP FOCUS</span>
+        <span class="td-label">SYS.01 :: CHOOSE YOUR PORTAL</span>
+        <span class="td-chevrons">▸▸▸</span>
+      </span>
+      <span class="td-line td-line-right"></span>
+    </div>
+
+    <!-- REGISTRATION LINKS -->
+    <section class="section path-section" style="padding-top: 50px;">
+      <div class="section-heading">
+        <span class="heading-line"></span>
+        <p class="eyebrow">CHOOSE YOUR PATH</p>
+        <h2>SELECT YOUR REGISTRATION PORTAL</h2>
+        <span class="heading-line"></span>
+        <p class="section-subtitle">
+          Please select the appropriate portal based on your college affiliation.
+        </p>
+      </div>
+
+      <div class="blocks-grid" style="max-width: 850px;">
+        
+        <!-- ARSD STUDENTS CARD -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScO-KPKzGEsERWLZ5jEmxrRR-bkg3nz2W03HSk6fntzGDmpBw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="interactive-card">
+          <div class="pixel-orb">🏛️</div>
+          <h3>ARSD Students</h3>
+          <p>Register here if you are currently enrolled at Atma Ram Sanatan Dharma College.</p>
+          
+          <div class="btn btn-primary">
+            <span>▣</span> OPEN ARSD FORM <span class="btn-arrow">→</span>
+          </div>
+        </a>
+
+        <!-- OTHER COLLEGES CARD -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXCXtVgp7pnSAcrP74-N2FMDVkyJ8ju21oFaBXF2U9asGpGw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="interactive-card">
+          <div class="pixel-orb">🌍</div>
+          <h3>Other Colleges</h3>
+          <p>Register here if you are visiting from another institution or university.</p>
+          
+          <div class="btn btn-secondary">
+            <span>▣</span> OPEN GUEST FORM <span class="btn-arrow">→</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- TECH DIVIDER -->
+    <div class="tech-divider" aria-hidden="true">
+      <span class="td-line td-line-left"></span>
+      <span class="td-chip">
+        <span class="td-bits"><i></i><i></i><i></i></span>
+        <span class="td-label">SYS.02 :: WHAT YOU WILL BUILD</span>
         <span class="td-chevrons">▸▸▸</span>
       </span>
       <span class="td-line td-line-right"></span>
@@ -95,11 +182,10 @@
       <div class="section-heading">
         <span class="heading-line"></span>
         <p class="eyebrow">WORKSHOP FOCUS</p>
-        <h2>HANDS-ON WORKSHOP ON AGENTIC AI SYSTEMS</h2>
+        <h2>HANDS-ON AUTONOMOUS SYSTEMS</h2>
         <span class="heading-line"></span>
         <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">
-          Before coordinating complex AI swarms, you must master the individual. 
-          Discover how a solitary AI agent operates autonomously.
+          Master the foundational anatomy of autonomous agents before competing in the build sprint.
         </p>
       </div>
 
@@ -109,9 +195,18 @@
             <span class="card-icon">🧠</span>
             <span class="level-tag">CORE</span>
           </div>
-          <h3>The Brain of the Agent</h3>
+          <h3>The Agent Brain</h3>
+          <div class="concept-visual" style="margin: 10px 0 14px;">
+            <div class="visual-flow">
+              <span class="vf-node vf-dim">Goal</span>
+              <span class="vf-arrow">➔</span>
+              <span class="vf-node vf-active">Plan Steps</span>
+              <span class="vf-arrow">➔</span>
+              <span class="vf-node vf-glow">Memory</span>
+            </div>
+          </div>
           <p>
-            Learn how a single LLM acts as the reasoning engine. We will explore how an agent breaks down complex user prompts, plans sequential steps, and maintains context across a task.
+            How LLMs reason sequentially, break down complex goals, and maintain multi-step task state.
           </p>
         </article>
 
@@ -120,9 +215,18 @@
             <span class="card-icon">⚙️</span>
             <span class="level-tag">EXECUTION</span>
           </div>
-          <h3>Tools & Action</h3>
+          <h3>Tools &amp; APIs</h3>
+          <div class="concept-visual" style="margin: 10px 0 14px;">
+            <div class="visual-flow">
+              <span class="vf-node vf-dim">Call</span>
+              <span class="vf-arrow">➔</span>
+              <span class="vf-node vf-active">Execute Code</span>
+              <span class="vf-arrow">➔</span>
+              <span class="vf-node vf-glow">Result</span>
+            </div>
+          </div>
           <p>
-            An agent is only as good as its tools. Dive into function calling and API integration, allowing your AI to browse the web, read files, run code, and manipulate data on its own.
+            Connecting agents to the real world: function calling, Python interpreters, and live REST endpoints.
           </p>
         </article>
 
@@ -131,60 +235,20 @@
             <span class="card-icon">🔄</span>
             <span class="level-tag">REFINEMENT</span>
           </div>
-          <h3>Observation & Correction</h3>
+          <h3>Dynamic ReAct Loop</h3>
+          <div class="concept-visual" style="margin: 10px 0 14px;">
+            <div class="visual-flow">
+              <span class="vf-node vf-dim">Act</span>
+              <span class="vf-arrow">➔</span>
+              <span class="vf-node vf-active">Observe Error</span>
+              <span class="vf-arrow">➔</span>
+              <span class="vf-node vf-glow">Auto-Heal</span>
+            </div>
+          </div>
           <p>
-            True autonomy requires self-correction. Understand the "ReAct" (Reason + Act) loop, where agents observe the results of their tool usage, catch errors, and adjust their plans dynamically.
+            Self-correcting autonomy: reading error traces, adapting plans, and recovering without crashes.
           </p>
         </article>
-      </div>
-    </section>
-
-    <!-- TECH DIVIDER -->
-    <div class="tech-divider" aria-hidden="true">
-      <span class="td-line td-line-left"></span>
-      <span class="td-chip">
-        <span class="td-bits"><i></i><i></i><i></i></span>
-        <span class="td-label">SYS.02 :: CHOOSE YOUR PATH</span>
-        <span class="td-chevrons">▸▸▸</span>
-      </span>
-      <span class="td-line td-line-right"></span>
-    </div>
-
-    <!-- REGISTRATION LINKS -->
-    <section class="section path-section">
-      <div class="section-heading">
-        <span class="heading-line"></span>
-        <p class="eyebrow">CHOOSE YOUR PATH</p>
-        <h2>SELECT YOUR REGISTRATION PORTAL</h2>
-        <span class="heading-line"></span>
-      </div>
-
-      <div class="blocks-grid" style="max-width: 850px;">
-        
-        <!-- ARSD STUDENTS CARD -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScO-KPKzGEsERWLZ5jEmxrRR-bkg3nz2W03HSk6fntzGDmpBw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="mission-card interactive-card">
-          <div class="pixel-orb">🏛️</div>
-          <!-- <p class="eyebrow">INTERNAL ACCESS</p> -->
-          <h3>ARSD Students</h3>
-          <p>Register here if you are currently enrolled at Atma Ram Sanatan Dharma College.</p>
-          
-          <div class="btn btn-primary">
-            <span>▣</span> OPEN ARSD FORM
-          </div>
-        </a>
-
-        <!-- OTHER COLLEGES CARD -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXCXtVgp7pnSAcrP74-N2FMDVkyJ8ju21oFaBXF2U9asGpGw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="mission-card interactive-card">
-          <div class="pixel-orb">🌍</div>
-          <!-- <p class="eyebrow">EXTERNAL ACCESS</p> -->
-          <h3>Other Colleges</h3>
-          <p>Register here if you are visiting from another institution or university.</p>
-          
-          <div class="btn btn-primary" style="background: transparent; color: #60A5FA;">
-            <span>▣</span> OPEN GUEST FORM
-          </div>
-        </a>
-
       </div>
     </section>
   </main>
@@ -196,9 +260,9 @@
       <span>AGENTIC AI<small>WORKSHOP</small></span>
     </a>
 
-    <p>Built for curious minds. Powered by imagination.</p>
+    <p>ARSD College · Tech-A-Thon Society. Built for curious builders.</p>
     <a href="#" class="back-top">BACK TO TOP ↑</a>
-    <p class="copyright">© 2026 · TECH-A-THON · ARSD COLLEGE · </p>
+    <p class="copyright">© 2026 · TECH-A-THON · ARSD COLLEGE · UNIVERSITY OF DELHI</p>
   </footer>
 
   <script src="script.js"></script>

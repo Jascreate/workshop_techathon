@@ -4,9 +4,9 @@ const navLinks = document.getElementById("navLinks");
 // Mobile navigation (only on pages that have the menu button)
 if (menuToggle && navLinks) {
   // Toggle mobile navigation
-  menuToggle.addEventListener("click", () => {
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
     const isOpen = navLinks.classList.toggle("open");
-
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.textContent = isOpen ? "✕" : "☰";
   });
@@ -18,6 +18,15 @@ if (menuToggle && navLinks) {
       menuToggle.setAttribute("aria-expanded", "false");
       menuToggle.textContent = "☰";
     });
+  });
+
+  // Close when clicking anywhere outside
+  document.addEventListener("click", (e) => {
+    if (navLinks.classList.contains("open") && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    }
   });
 }
 
@@ -34,7 +43,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.05, rootMargin: "0px 0px -60px 0px" }
+    { threshold: 0.05, rootMargin: "0px 0px -40px 0px" }
   );
 
   revealTargets.forEach((target) => {
