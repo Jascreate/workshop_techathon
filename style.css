@@ -2139,3 +2139,27 @@ section {
     animation: none;
   }
 }
+
+/* Workshop Flow Tags */
+.flow-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 16px;
+}
+
+.flow-tags span {
+  padding: 4px 8px;
+  color: #93C5FD;
+  background: rgba(15, 33, 64, 0.85);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+}
+
+.flow-step h3 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
