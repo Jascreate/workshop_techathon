@@ -2301,3 +2301,114 @@ section {
     gap: 10px;
   }
 }
+
+
+/* Hero Note Clean Styling */
+.hero-note-wrapper {
+  margin-top: 22px;
+}
+
+.hero-note {
+  display: inline-block;
+  background: rgba(5, 11, 26, 0.85);
+  color: #D6E4FF;
+  padding: 10px 22px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Hero Bottom Responsive Grid & Cards */
+.hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 55px;
+}
+
+.event-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(13, 27, 54, 0.78);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 4px 4px 0 #050B1A;
+  min-width: 0;
+}
+
+.detail-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 2.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--blue);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.event-detail > div {
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.event-detail small {
+  display: block;
+  color: #A8B8D4;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.event-detail strong {
+  display: block;
+  color: #F1F5FF;
+  font-size: 0.78rem;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1250px) {
+  .hero-bottom {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+    margin-top: 36px;
+  }
+  .event-detail {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .detail-icon {
+    flex: 0 0 1.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.2rem;
+  }
+  .event-detail strong {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-bottom {
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+  }
+}
