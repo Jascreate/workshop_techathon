@@ -2209,3 +2209,50 @@ section {
   color: var(--blue);
   font-size: 0.65rem;
 }
+
+
+/* Speaker Credential Grid */
+.speaker-credential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+
+.cred-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #10264A;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-left: 3px solid var(--blue);
+  border-radius: 4px;
+}
+
+.cred-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cred-pill strong {
+  display: block;
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+
+.cred-pill small {
+  display: block;
+  color: #93C5FD;
+  font-size: 0.65rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 600px) {
+  .speaker-credential-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
