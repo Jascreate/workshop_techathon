@@ -2163,3 +2163,49 @@ section {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+
+/* What You'll Learn: Concept Visual Diagrams */
+.concept-visual {
+  margin: 12px 0 14px;
+  padding: 10px 12px;
+  background: rgba(5, 11, 26, 0.85);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  border-radius: 4px;
+}
+
+.visual-flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-family: var(--pixel);
+  font-size: 0.55rem;
+  line-height: 1.4;
+}
+
+.vf-node {
+  padding: 4px 7px;
+  background: #112648;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  color: #D6E4FF;
+  white-space: nowrap;
+}
+
+.vf-node.vf-active {
+  background: #1B3B6F;
+  border-color: var(--blue);
+  color: #FFFFFF;
+}
+
+.vf-node.vf-glow {
+  background: rgba(96, 165, 250, 0.22);
+  border-color: var(--blue);
+  color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
+}
+
+.vf-arrow {
+  color: var(--blue);
+  font-size: 0.65rem;
+}
