@@ -2146,8 +2146,13 @@ section {
    ========================================================================== */
 
 /* Prevent any possible horizontal overflow across all screen widths */
-html, body {
+html,
+body {
   max-width: 100%;
+}
+
+/* overflow-x is set on body only, so the page has a single scrollbar */
+body {
   overflow-x: hidden;
 }
 
@@ -2490,4 +2495,24 @@ html, body {
 .icon-divider, .tech-divider {
   overflow: hidden;
   max-width: 100%;
+}
+
+/* HERO BOTTOM: keep each detail on a single line */
+@media (min-width: 769px) {
+  .event-detail strong,
+  .event-detail small {
+    white-space: nowrap;
+  }
+
+  .hero-bottom {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1700px) {
+  .hero-bottom {
+    grid-template-columns: repeat(6, auto) !important;
+    justify-content: space-between;
+    max-width: 1500px;
+  }
 }
